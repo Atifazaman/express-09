@@ -1,0 +1,10 @@
+const express=require('express')
+const cartRouter=express.Router()
+
+cartRouter.get("/:id",(req,res)=>{
+res.send(`Fetching cart for user with ID: ${req.params.id}`)
+})
+cartRouter.post("/:id",(req,res)=>{
+res.send(`Adding product to cart for user with ID: ${req.params.id}`)
+})
+module.exports=cartRouter
